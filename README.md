@@ -26,14 +26,14 @@
 
 #### Preprocessing / Clean up
 
-* 1. HTML tag removal using BeautifulSoup
-* 2. Contraction expansion (e.g., "don't" → "do not")
-* 3. Emoji removal
-* 4. URL removal
-* 5. Punctuation removal and text lowercase conversion
-* 6. Stopword removal
-* 7. Lemmatization using WordNet
-* 8. TF-IDF vectorization (10,000 features)
+* HTML tag removal using BeautifulSoup
+* Contraction expansion (e.g., "don't" → "do not")
+* Emoji removal
+* URL removal
+* Punctuation removal and text lowercase conversion
+* Stopword removal
+* Lemmatization using WordNet
+* TF-IDF vectorization (10,000 features)
 
 #### Data Visualization
 
