@@ -68,52 +68,70 @@ Show a few visualization of the data and say a few words about what you see.
     * Efficient handling of sparse matrices
     * Better regularization to prevent overfitting
       
+* **Model Parameters**:
+  * **TF-IDF Vectorizer**:
+    * max_features: 10,000
+    * Default n-gram range: (1,1)
+    * Default tokenization pattern
+
+  * **Common Parameters Across Models**:
+    * random_state: 42 (for reproducibility)
+    * n_estimators: 100 (for ensemble models)
+    * Default learning rates and tree depths
+      
 ### Training
 
-* Describe the training:
-  * How you trained: software and hardware.
-  * How did training take.
-  * Training curves (loss vs epoch for test/train).
-  * How did you decide to stop training.
-  * Any difficulties? How did you resolve them?
+* **Hardware and Software Environment**:
+  * The code runs efficiently on standard CPU hardware
+  * No GPU acceleration required
+
+* **Training Decision**:
+  * Used default hyperparameters initially
+  * No extensive hyperparameter tuning performed
+  * No early stopping implemented
 
 ### Performance Comparison
 
-* Clearly define the key performance metric(s).
-* Show/compare results in one table.
-* Show one (or few) visualization(s) of results, for example ROC curves.
-
-### Conclusions
-
-* State any conclusions you can infer from your work. Example: LSTM work better than GRU.
+* **XGboost**: 0.847 accuracy score
+* **Random Forest**: 0.842 accuracy score
+* **Ada Boost**: 0.821 accuracy score
+* **Gradient Boosting**: 0.796 accuracy score
+* **Decision Tree**: 0.714 accuracy score
 
 ### Future Work
 
-* What would be the next thing that you would try.
-* What are some other studies that can be done starting from here.
+* Implement deep learning models (LSTM, BERT)
+* Experiment with different text preprocessing techniques
+* Add cross-validation for more robust model evaluation
 
 ## How to reproduce results
 
-* In this section, provide instructions at least one of the following:
-   * Reproduce your results fully, including training.
-   * Apply this package to other data. For example, how to use the model you trained.
-   * Use this package to perform their own study.
-* Also describe what resources to use for this package, if appropirate. For example, point them to Collab and TPUs.
+
 
 ### Software Setup
-* List all of the required packages.
-* If not standard, provide or point to instruction for installing the packages.
-* Describe how to install your package.
-
-### Data
-
-* Point to where they can download the data.
-* Lead them through preprocessing steps, if necessary.
-
-## Citations
-
-* Provide any references.
-
+* **Required package**:
+  * Pandas, NumPy, scikit-learn, nltk, beautifulsoup4, contractions, xgboost, seaborn, matplotlib
+  * ```sh
+    !pip install contractions
+    !pip install pandas
+    !pip install numpy
+    !pip install scikit-learn
+    !pip install xgboost
+    !pip install matplotlib
+    !pip install seaborn
+    ```
+    
+### Dataset
+* Download the IMBD data:
+  ```sh
+  !gdown 1v36q7Efz0mprjAv4g6TkQM2YlDKdqOuy
+  ```
+* Loading dataset:
+  ```sh
+  import pandas as pd
+  df = pd.read_csv('./IMDB-Dataset.csv')
+  ```
+  
 
 
 
