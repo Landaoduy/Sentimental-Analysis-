@@ -4,8 +4,14 @@
 ## Overview
 
   * **Definition of the tasks / challenge**: The project aims to perform binary sentiment classification on IMDB movie reviews, categorizing them as either positive or negative based on the review text. This involves natural language processing (NLP) techniques and machine learning models to understand and classify the emotional tone of movie reviews.
+    
   * **Your approach**: The solution employs a comprehensive text preprocessing pipeline including HTML tag removal, contraction expansion, emoji removal, and lemmatization. The processed text is then vectorized using TF-IDF, and multiple tree-based models are compared for classification performance.
-  * **Summary of the performance achieved**: 
+    
+  * **Summary of the performance achieved**: Based on the Accuracy Score, out models achieved the following performance on test set:
+      * XGBoost: Best overall performance with accuracy score of 0.847
+      * Random Forest: Close second with accuracy score of 0.842
+      * AdaBoost: Strong performance with accuracy score of 0.821
+      * Decision Tree and Gradient Boosting:  Baseline model with reasonable performance with accuracy score of 0.714 and 0.796
 
 ## Summary of Workdone
 
