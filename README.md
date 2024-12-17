@@ -37,7 +37,13 @@
 
 #### Data Visualization
 
-Show a few visualization of the data and say a few words about what you see.
+* **Distribution of word lengths in the review**:
+  ![Screenshot 2024-12-17 004604](https://github.com/user-attachments/assets/813bff54-d9d4-48c0-906a-f62091b02f81)
+
+  * Both positive and negative reviews have similar length distributions
+  * Most reviews are between 100-400 words
+  * Very long reviews (>600 words) are rare
+  * The length of a review isn't a strong indicator of whether it's positive or negative
 
 ### Problem Formulation
 
