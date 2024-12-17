@@ -5,7 +5,7 @@
 
   * **Definition of the tasks / challenge**: The project aims to perform binary sentiment classification on IMDB movie reviews, categorizing them as either positive or negative based on the review text. This involves natural language processing (NLP) techniques and machine learning models to understand and classify the emotional tone of movie reviews.
     
-  * **Your approach**: The solution employs a comprehensive text preprocessing pipeline including HTML tag removal, contraction expansion, emoji removal, and lemmatization. The processed text is then vectorized using TF-IDF, and multiple tree-based models are compared for classification performance.
+  * **My approach**: The solution employs a comprehensive text preprocessing pipeline including HTML tag removal, contraction expansion, emoji removal, and lemmatization. The processed text is then vectorized using TF-IDF, and multiple tree-based models are compared for classification performance.
     
   * **Summary of the performance achieved**: Based on the Accuracy Score, out models achieved the following performance on test set:
       * XGBoost: Best overall performance with accuracy score of 0.847
@@ -15,20 +15,24 @@
 
 ## Summary of Workdone
 
-Include only the sections that are relevant an appropriate.
-
 ### Data
 
 * Data:
-  * Type: For example
-    * Input: medical images (1000x1000 pixel jpegs), CSV file: image filename -> diagnosis
-    * Input: CSV file of features, output: signal/background flag in 1st column.
-  * Size: How much data?
-  * Instances (Train, Test, Validation Split): how many data points? Ex: 1000 patients for training, 200 for testing, none for validation
+  * Type: Text data (movie reviews) with binary sentiment labels
+
+  * Size: Near 50,000 movie reviews
+  * Instances (Train, Test Split): 80% Training (~ 40,000 reviews), 20% testing (~ 10,000 reviews)
 
 #### Preprocessing / Clean up
 
-* Describe any manipulations you performed to the data.
+* 1. HTML tag removal using BeautifulSoup
+* 2. Contraction expansion (e.g., "don't" → "do not")
+* 3. Emoji removal
+* 4. URL removal
+* 5. Punctuation removal and text lowercase conversion
+* 6. Stopword removal
+* 7. Lemmatization using WordNet
+* 8. TF-IDF vectorization (10,000 features)
 
 #### Data Visualization
 
