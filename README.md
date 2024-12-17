@@ -19,8 +19,9 @@
 
 * Data:
   * Type: Text data (movie reviews) with binary sentiment labels
-
+    
   * Size: Near 50,000 movie reviews
+    
   * Instances (Train, Test Split): 80% Training (~ 40,000 reviews), 20% testing (~ 10,000 reviews)
 
 #### Preprocessing / Clean up
@@ -40,12 +41,33 @@ Show a few visualization of the data and say a few words about what you see.
 
 ### Problem Formulation
 
-* Define:
-  * Input / Output
-  * Models
-    * Describe the different models you tried and why.
-  * Loss, Optimizer, other Hyperparameters.
+* **Input**: Text data (movie reviews)
+  * Raw text containing HTML tags, contractions, emojis, URLs, and various text artifacts
+  * Variable length reviews (ranging from few words to several paragraphs)
+    
+* **Output**: Binary sentiment classification
+  * Postivive: 1
+  * Negative: 0
 
+* **Models**:
+  * **Decision Tree Classifier**:
+    * Chosen for its interpretability and ability to handle non-linear relationships
+    * Simple baseline model for comparison
+
+  * **Random Forest**:
+    * Ensemble method to reduce overfitting of decision trees
+    * Better generalization through bagging
+    * Good at handling high-dimensional sparse data from TF-IDF
+
+  * **AdaBoost**:
+    * Focuses on misclassified samples through boosting
+    * Helps in handling difficult-to-classify reviews
+    * Reduces bias in the model
+
+  * **XGBoost**:
+    * Efficient handling of sparse matrices
+    * Better regularization to prevent overfitting
+      
 ### Training
 
 * Describe the training:
@@ -78,23 +100,6 @@ Show a few visualization of the data and say a few words about what you see.
    * Use this package to perform their own study.
 * Also describe what resources to use for this package, if appropirate. For example, point them to Collab and TPUs.
 
-### Overview of files in repository
-
-* Describe the directory structure, if any.
-* List all relavent files and describe their role in the package.
-* An example:
-  * utils.py: various functions that are used in cleaning and visualizing data.
-  * preprocess.ipynb: Takes input data in CSV and writes out data frame after cleanup.
-  * visualization.ipynb: Creates various visualizations of the data.
-  * models.py: Contains functions that build the various models.
-  * training-model-1.ipynb: Trains the first model and saves model during training.
-  * training-model-2.ipynb: Trains the second model and saves model during training.
-  * training-model-3.ipynb: Trains the third model and saves model during training.
-  * performance.ipynb: loads multiple trained models and compares results.
-  * inference.ipynb: loads a trained model and applies it to test data to create kaggle submission.
-
-* Note that all of these notebooks should contain enough text for someone to understand what is happening.
-
 ### Software Setup
 * List all of the required packages.
 * If not standard, provide or point to instruction for installing the packages.
@@ -104,15 +109,6 @@ Show a few visualization of the data and say a few words about what you see.
 
 * Point to where they can download the data.
 * Lead them through preprocessing steps, if necessary.
-
-### Training
-
-* Describe how to train the model
-
-#### Performance Evaluation
-
-* Describe how to run the performance evaluation.
-
 
 ## Citations
 
