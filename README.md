@@ -106,8 +106,36 @@ Show a few visualization of the data and say a few words about what you see.
 
 ## How to reproduce results
 
+* **Dataset requirements**:
+  * IMDB-Dataset.csv: Contains 50,000 movie reviews with sentiment labels
 
+    * Column 'review': Text of the movie review
+    * Column 'sentiment': Binary sentiment label (positive/negative)
 
+* **Result Reproduction**:
+  * **1. Data Loading**:
+    * Load dataset using pandas
+    * Initial data exploration through checking for missing values, view data distribution
+      
+  * **2. Data Preprocessing**:
+    * Install NLTK packages
+    * Text cleaning steps
+
+  * **3. Feature Processing**:
+    * TF-IDF Vectorization:
+      * Set max_features to 10,000
+      * Fit vectorizer on training data
+
+    * Train-Test Split: 80/20
+
+  * **4. Model Training and Evaluation**:
+    * Train 5 models:
+      * XGboost
+      * Random Forest
+      * Ada Boost
+      * Gradient Boosting
+      * Decision Tree
+    
 ### Software Setup
 * **Required package**:
   * Pandas, NumPy, scikit-learn, nltk, beautifulsoup4, contractions, xgboost, seaborn, matplotlib
